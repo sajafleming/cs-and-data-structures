@@ -1,0 +1,53 @@
+Skillz
+
+Runtime
+    1) Workload is the size of the list in question
+
+    2)
+    O(1)
+    O(log n)
+    O(n)
+    O(n log n)
+    O(n^2)
+    O(2^n)
+
+Stacks and Queues:
+    1)
+        1. Stack
+        2. Queue
+        3. I don't understand the question but I'm gonna say stack
+
+    2) Requests on a web server. The long lines I wait in for food and precious coffee in SF.
+
+    3) A stack of chairs. Back button in a browser...or any undo button in general.
+
+
+Linked lists:
+    1) The nodes are the 3 boxes containing the fruit name and "next" data. The data for each node is the name of the fruit. The head is the information that the llist has that points to the first node. The tail is the array pointing to None.
+
+    2) A singly linked list only contains info about the next node whereas a doubly linked list points to both the next node and the node before it. 
+
+    3) Because if you don't keep track of the tail you have to look at every node to see if the next node is none (aka the last node). If you keep track of the tail you know exactly where to add it and don't have to start from the head.
+
+Trees:
+    1) Is the tree stored in a way that is ordered? If I'm not assuming the list is stored with order in some way the best case scenerio would be:
+
+    [food]
+    [Mexican, Italian, Indian]
+    [Italian, Indian, burrito, tacos, enchiladas]
+    [Indian, burrito, tacos, enchiladas, lasagna, pizza]
+    [burrito]!
+
+    Otherwise, if the tree is ordered from left to right it would need to exhaust the immediate children of italian and indian children first:
+    [food]
+    [Italian, Indian, Mexican]
+    [Indian, Mexican, lasagna, pizza]
+    [Mexican, lasagna, pizza, tikka masala, saag, ]
+    [lasagna, pizza, tikka masala, saag, burrito, tacos, enchiladas]
+    [pizza, tikka masala, saag, burrito, tacos, enchiladas]
+    [tikka masala, saag, burrito, tacos, enchiladas, thin crust, chicago-style, ny stlye, sicilian...]]
+    ...and get to burrito
+
+    2) (Given that it's ordered from left to right) it would first look at the 3 types of food and then it would need to look at each of the children and the children's children. It would start with Italian, then lasagna then pizza then thin crust then chicago-style ding ding we have a winner
+
+    3) Because it is ordered in some way (alphabetical or by numerical value), you can knock out half of the guesses each time (given that it's balanced).
